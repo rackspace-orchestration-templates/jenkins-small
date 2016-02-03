@@ -1,7 +1,7 @@
 schema-version: 1.0.0
 application-family: Miscellaneous
 application-name: Jenkins
-application-version: latest
+application-version: Latest
 flavor: Production
 flavor-weight: 1
 reach-info:
@@ -35,6 +35,8 @@ instructions: |
   "server_count" parameter for this stack.
 
 description: |
+  #### Production
+  
   A single Linux server running the lastest stable version of
   [Jenkins CI](http://jenkins-ci.org/content/about-jenkins-ci) Server,
   with up to 10 optional worker nodes (connected via Swarm).
