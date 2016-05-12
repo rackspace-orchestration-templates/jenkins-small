@@ -20,11 +20,11 @@ def jenkins_is_responding_on_http():
 def check():
     env.platform_family = detect.detect()
 
-    assert package.installed("jenkins")
-    assert port.is_listening(8080)
-    assert user.exists("jenkins")
-    assert service.is_enabled("jenkins")
-    assert jenkins_is_responding_on_http()
+    assert package.installed("jenkins"), 'Jenkins is not installed'
+    assert port.is_listening(8080), 'Jenkins is not listening'
+    assert user.exists("jenkins"), 'Jenkins user does not exist'
+    assert service.is_enabled("jenkins"), 'Jenkins service is not enabled'
+    assert jenkins_is_responding_on_http(), 'Jenkins is not responding'
 
 
 @task
