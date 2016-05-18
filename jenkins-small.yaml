@@ -10,7 +10,6 @@ description: |
 parameter_groups:
 - label: rax-dev-params
   parameters:
-  - server_image
   - secondary_template
   - ansible_source
 
@@ -44,13 +43,15 @@ parameters:
       - 4 GB General Purpose v1
       - 8 GB General Purpose v1
   server_image:
-   type: string
-   default: f4bbbce2-50b0-4b07-bf09-96c175a45f4b
-   label: Server Image
-   description: Image to use for Jenkins
-   constraints:
-   - allowed_values:
-     - f4bbbce2-50b0-4b07-bf09-96c175a45f4b
+    type: string
+    default: Ubuntu 14.04 LTS (Trusty Tahr) (PVHVM) (Orchestration)
+    label: Server Image
+    description: Image to be used for all servers in this stack
+    constraints:
+    - allowed_values:
+      - Ubuntu 14.04 LTS (Trusty Tahr) (PVHVM) (Orchestration)
+      - CentOS 7 (PVHVM) (Orchestration)
+    immutable: true
   server_count:
     type: number
     default: 0
