@@ -68,10 +68,10 @@ Outputs
 Once a stack comes online, use `heat output-list` to see all available outputs.
 Use `heat output-show <OUTPUT NAME>` to get the value of a specific output.
 
-* `jenkins_public_ip`: Jenkins Public IP 
-* `jenkins_public_url`: Jenkins Public URL 
-* `ssh_private_key`: SSH Private Key 
-* `secondary_ips`: Secondary Node IPs 
+* `jenkins_public_ip`: Jenkins Public IP
+* `jenkins_public_url`: Jenkins Public URL
+* `ssh_private_key`: SSH Private Key
+* `secondary_ips`: Secondary Node IPs
 
 For multi-line values, the response will come in an escaped form. To get rid of
 the escapes, use `echo -e '<STRING>' > file.txt`. For vim users, a substitution
